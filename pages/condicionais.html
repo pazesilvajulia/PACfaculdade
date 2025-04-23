@@ -1,0 +1,161 @@
+<!DOCTYPE html> <!-- ESTRUTURA HTML FEITA POR KAUAN-->
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aula: Estruturas Condicionais em C</title>
+ 
+</head>
+<body>
+
+  <header class="site-header">
+    <h1 class="site-title">Aula de Linguagem C</h1>
+    <p class="site-subtitle">Estruturas Condicionais: if, else if, else, switch e case</p>
+  </header>
+
+  <main class="main-content">
+
+    <section class="content-section section-introducao">
+      <h2 class="section-title">1. Introdução às Estruturas Condicionais</h2>
+      <p class="text-paragraph">As estruturas condicionais na linguagem C permitem que o programa tome decisões com base em determinadas condições. Elas são fundamentais para controlar o fluxo de execução do programa.</p>
+      <p class="text-paragraph">Nesta aula, vamos estudar as instruções <code class="code-inline">if</code>, <code class="code-inline">else if</code>, <code class="code-inline">else</code> e a estrutura <code class="code-inline">switch-case</code>.</p>
+    </section>
+
+    <section class="content-section section-if">
+      <h2 class="section-title">2. Estrutura <code class="code-inline">if - else if - else</code></h2>
+      <p class="text-paragraph">A estrutura começa com a palavra-chave <code class="code-inline">if</code>, seguida de uma condição entre parênteses. Se essa condição for verdadeira, o bloco dentro das chaves será executado. Se não, outras condições podem ser testadas com <code class="code-inline">else if</code>, e se nenhuma for verdadeira, o bloco <code class="code-inline">else</code> será executado.</p>
+
+      <p class="text-paragraph"><strong>Sintaxe:</strong></p>
+      <pre class="code-block code-sintaxe-if">
+if (condicao1) {
+  // executa se condicao1 for verdadeira
+} else if (condicao2) {
+  // executa se condicao2 for verdadeira
+} else {
+  // executa se nenhuma for verdadeira
+}
+      </pre>
+
+      <p class="text-paragraph"><strong>Exemplo:</strong> Classificando faixa etária:</p>
+      <pre class="code-block code-exemplo-if">
+int idade = 32;
+
+if (idade &lt; 18) {
+  printf("Você é menor de idade");
+} else if (idade &gt;= 18 &amp;&amp; idade &lt;= 64) {
+  printf("Você é adulto");
+} else {
+  printf("Você é idoso");
+}
+      </pre>
+
+      <p class="text-paragraph">Se a idade for 32, a condição <code class="code-inline">idade >= 18 && idade <= 64</code> será verdadeira e o programa imprimirá: <strong>"Você é adulto"</strong>.</p>
+    </section>
+
+    <section class="content-section section-switch">
+      <h2 class="section-title">3. Estrutura <code class="code-inline">switch - case</code></h2>
+      <p class="text-paragraph">A estrutura <code class="code-inline">switch</code> avalia uma variável e executa o código correspondente ao <code class="code-inline">case</code> com valor igual ao da variável. É ideal para comparações fixas.</p>
+
+      <p class="text-paragraph"><strong>Sintaxe:</strong></p>
+      <pre class="code-block code-sintaxe-switch">
+switch (expressao) {
+  case valor1:
+    // código executado
+    break;
+  case valor2:
+    // outro código
+    break;
+  default:
+    // executado se nenhum valor for correspondente
+}
+      </pre>
+
+      <p class="text-paragraph"><strong>Exemplo:</strong> Exibindo o dia da semana:</p>
+      <pre class="code-block code-exemplo-switch">
+int diaDaSemana = 3;
+
+switch (diaDaSemana) {
+  case 1:
+    printf("Domingo");
+    break;
+  case 2:
+    printf("Segunda-feira");
+    break;
+  case 3:
+    printf("Terça-feira");
+    break;
+  case 4:
+    printf("Quarta-feira");
+    break;
+  case 5:
+    printf("Quinta-feira");
+    break;
+  case 6:
+    printf("Sexta-feira");
+    break;
+  case 7:
+    printf("Sábado");
+    break;
+  default:
+    printf("Dia da semana inválido");
+}
+      </pre>
+
+      <p class="text-paragraph">Se o valor da variável for 3, o programa imprimirá <strong>"Terça-feira"</strong>.</p>
+    </section>
+
+    <section class="content-section section-break-default">
+      <h2 class="section-title">4. Palavras-chave <code class="code-inline">break</code> e <code class="code-inline">default</code></h2>
+      <p class="text-paragraph">O comando <code class="code-inline">break</code> encerra a execução de um bloco <code class="code-inline">switch</code> ou um loop (<code class="code-inline">for</code>, <code class="code-inline">while</code>...). Ele evita que o código continue executando os próximos <code class="code-inline">case</code>s.</p>
+      <p class="text-paragraph">Já <code class="code-inline">default</code> é utilizado quando nenhum <code class="code-inline">case</code> anterior foi satisfeito.</p>
+
+      <pre class="code-block code-exemplo-break-default">
+int day = 4;
+
+switch (day) {
+  case 6:
+    printf("Today is Saturday");
+    break;
+  case 7:
+    printf("Today is Sunday");
+    break;
+  default:
+    printf("Looking forward to the Weekend");
+}
+      </pre>
+    </section>
+
+    <section class="content-section section-exemplo-completo">
+      <h2 class="section-title">5. Exemplo Completo com <code class="code-inline">if</code></h2>
+      <p class="text-paragraph">Este programa lê um número entre 1 e 7 e imprime o dia correspondente da semana. Se o número for inválido, exibe uma mensagem de erro:</p>
+
+      <pre class="code-block code-exemplo-completo">
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+int main(void) {
+    int valor;
+  
+    printf("Digite um valor de 1 a 7: ");
+    scanf("%d", &valor);
+  
+    if (valor == 1)
+      printf("Domingo\n");
+    else if (valor == 2)
+      printf("Segunda\n");
+    else if (valor == 3)
+      printf("Terça\n");
+    else if (valor == 4)
+      printf("Quarta\n");
+    else if (valor == 5)
+      printf("Quinta\n");
+    else if (valor == 6)
+      printf("Sexta\n");
+    else if (valor == 7)
+      printf("Sábado\n");
+    else
+      printf("Valor inválido!\n");
+  
+    getch();
+    return 0;
+  }

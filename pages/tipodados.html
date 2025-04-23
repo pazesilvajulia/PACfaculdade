@@ -1,0 +1,97 @@
+<!DOCTYPE html> <!-- ESTRUTURA HTML FEITA POR TIAGO -->
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <main class="main-content">
+        <div class="intro">
+            <h1 class="title">Variáveis na Linguagem C</h1>
+            <p class="description">C é uma linguagem considerada de tipagem forte, ou seja, todas as variáveis precisam ter seus tipos
+                definidos.</p>
+        </div>
+
+        <div class="variable-types">
+            <h2 class="subtitle">O que é tipo de variáveis?</h2>
+            <p class="description">Variáveis são locais onde são guardados dados, exemplo idade, altura e nome de uma pessoa tudo isso
+                guardado num lugar chamado memória (RAM) do computador na, variáveis pode ser diversos tipos, os
+                principais são os chamados de variáveis primitivas:</p>
+            <ul class="list">
+                <li class="list-item">Float;</li>
+                <li class="list-item">Int;</li>
+                <li class="list-item">Char;</li>
+                <li class="list-item">Bool;</li>
+                <li class="list-item">String;</li>
+            </ul>
+        </div>
+
+        <div class="examples">
+            <h2 class="subtitle">Tipos de variáveis:</h2>
+            <ul class="list">
+                <li class="list-item">Int (inteiro): É um valor numérico inteiro. Ex: int idade=18;</li>
+                <li class="list-item">Float (ponto-flutuante): É um valor numérico que pode conter o ponto. Ex: float altura=1.8;</li>
+                <li class="list-item">Char (caracter): É um tipo de variável que pode representar tanto como valores numéricos quanto
+                    valores que representam uma letra baseado na tabela ASCII.</li>
+            </ul>
+            <h2 class="example-title">Exemplo:</h2>
+            <p class="code-example">char primeiraLetraNome='F';</p>
+            <p class="code-example">char idade =18;</p>
+        </div>
+
+        <div class="ascii-table">
+            <h2 class="subtitle">Tabela ASCII:</h2>
+            <p class="description">String (texto): É um valor que representa um texto, uma lista/cadeia de letras. Diferente de outras
+                linguagens, em C a string não é um tipo próprio, mas sim como uma lista de caracteres.</p>
+            <h2 class="example-title">Exemplo:</h2>
+            <p class="code-example">char nome[12]= "Felipe Vieira";</p>
+            <p class="description">Tabela com os tipos completos;</p>
+            <p class="description">Definição de uma variável;</p>
+            <p class="code-example">“tipo” “nome” = “valor”;</p>
+        </div>
+
+        <div class="define-const">
+            <h2 class="subtitle">Tipos #Define e const:</h2>
+            <p class="description">#Define é uma diretriz da linguagem, usado para auxiliar na referência de dados textos por nomes, não sendo
+                uma variável, mas uma indicação de um dado por um nome.</p>
+            <h2 class="example-title">Exemplo:</h2>
+            <p class="code-example">#define PI 3.14159265359;</p>
+            <p class="description">O valor do PI é constante e não muda;</p>
+            <h2 class="example-title">Exemplo onde pode ser usado:</h2>
+            <p class="code-example">float areaCirculo= 3.14159265359 *2*radio; // O valor “3.14159265359” é o PI de forma implícita.</p>
+            <h2 class="example-title">Usando define:</h2>
+            <p class="code-example">#define PI 3.14159265359;</p>
+            <p class="code-example">float areaCirculo= PI*2*radio;</p>
+            <h2 class="example-title">E o const?</h2>
+            <p class="description">Const cria uma variável imutável (não pode ser modificada após ser inicializada). A diferença em relação
+                ao #define é que const cria uma variável na memória do computador, que pode ser usada para armazenar
+                valores mais complexos, como listas (arrays) e estruturas de dados (struct).</p>
+            <h2 class="example-title">Exemplo:</h2>
+            <p class="code-example">const int lista_numeros[3]= {5,3,99};</p>
+            <p class="code-example">printf(“Primeiro número: %i”, lista_numeros[0]);</p>
+        </div>
+
+        <div class="naming-rules">
+            <h2 class="subtitle">Regras de Nomenclatura de variáveis em C:</h2>
+            <p class="description">Linguagem não pode conter os Keyword (palavras-chave) que são palavras reservadas da própria
+                linguagem.</p>
+            <h2 class="example-title">Exemplo:</h2>
+            <p class="code-example">int 2soma = 25+50; // vai gerar um erro.</p>
+            <p class="code-example">int soma2 = 25+50; // será aceito pela linguagem.</p>
+            <h2 class="example-title">Não pode conter espaços no nome da variável:</h2>
+            <p class="code-example">float salario funcionarios; // irá causar um erro.</p>
+            <p class="code-example">float salario_funcionarios; // está correto.</p>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+
+</html>

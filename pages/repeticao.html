@@ -1,0 +1,140 @@
+<!DOCTYPE html> <!-- ESTRUTURA HTML FEITA POR KAUAN -->
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estruturas de Repetição em C</title>
+</head>
+<body>
+
+  <header class="site-header">
+    <h1 class="site-title">Estruturas de Repetição na Linguagem C</h1>
+    <p class="site-subtitle">Aprenda como usar os laços de repetição while, do while e for</p>
+  </header>
+
+  <main class="main-content">
+
+    <section class="section-overview">
+
+      <h2 class="section-title">O que são laços de repetição?</h2>
+
+      <p class="section-paragraph">
+        Laços de repetição em C são usados para executar um mesmo trecho de código várias vezes, sem a necessidade de reescrever as instruções. Existem três estruturas principais de repetição na linguagem C:
+        <strong>while</strong>, <strong>do while</strong> e <strong>for</strong>.
+      </p>
+
+    </section>
+
+    <section class="section-while">
+
+      <h2 class="section-title">Estrutura <code>while</code></h2>
+
+      <p class="section-paragraph">
+        A estrutura <strong>while</strong> executa um bloco de código enquanto a condição especificada for verdadeira. A verificação acontece antes da execução.
+      </p>
+
+      <h3 class="section-subtitle">Etapas do loop <code>while</code>:</h3>
+
+      <ol class="section-list">
+        <li>Testa a condição.</li>
+        <li>Se for falsa, pula o bloco.</li>
+        <li>Se for verdadeira, executa o bloco.</li>
+        <li>Volta ao passo 1 após a execução.</li>
+      </ol>
+
+      <h3 class="section-subtitle">Exemplo:</h3>
+
+      <pre class="code-block">
+        int contador = 1;
+
+        while(contador &lt;= 10) {
+        printf("%i / ", contador);
+        contador = contador + 1;
+        }
+
+        printf("\nFinalizou o comando do while!");
+      </pre>
+
+      <p class="section-paragraph"><strong>Saída:</strong></p>
+
+      <pre class="code-block">
+        1 / 2 / 3 / 4 / 5 / 6 / 7 / 8 / 9 / 10 /
+        Finalizou o comando do while!
+      </pre>
+
+    </section>
+
+    <section class="section-do-while">
+
+      <h2 class="section-title">Estrutura <code>do while</code></h2>
+
+      <p class="section-paragraph">
+        Diferente do <strong>while</strong>, o <strong>do while</strong> executa o bloco primeiro e só depois testa a condição. Ou seja, o bloco será executado pelo menos uma vez.
+      </p>
+
+      <h3 class="section-subtitle">Exemplo:</h3>
+
+      <pre class="code-block">
+        int numero;
+
+        do {
+        scanf("%i", &numero);
+        } while(numero &lt;= 0);
+      </pre>
+
+      <p class="section-paragraph">
+        Esse código força a leitura de um número positivo. Mesmo que o usuário digite um valor inválido primeiro, o código executa ao menos uma vez.
+      </p>
+
+    </section>
+
+    <section class="section-for">
+
+      <h2 class="section-title">Estrutura <code>for</code></h2>
+
+      <p class="section-paragraph">
+        A estrutura <strong>for</strong> permite definir três partes essenciais no próprio cabeçalho:
+      </p>
+
+      <ul class="section-list">
+        <li>Inicialização da variável controladora;</li>
+        <li>Condição de continuação do loop;</li>
+        <li>Atualização da variável a cada repetição.</li>
+      </ul>
+
+      <h3 class="section-subtitle">Exemplo:</h3>
+
+      <pre class="code-block">
+        for(int i = 1; i &lt;= 10; i++) {
+        printf("%d / ", i);
+        }
+      </pre>
+
+    </section>
+
+    <section class="section-comparison">
+
+      <h2 class="section-title">Comparação entre <code>while</code> e <code>for</code></h2>
+
+      <p class="section-paragraph">Os dois laços podem fazer a mesma coisa. Veja o exemplo abaixo:</p>
+
+      <pre class="code-block">
+        // Usando while
+        int i = 1;
+        while(i &lt;= 10) {
+        printf("%d / ", i);
+        i++;
+        }
+
+        // Usando for
+        for(int i = 1; i &lt;= 10; i++) {
+        printf("%d / ", i);
+        }
+      </pre>
+
+    </section>
+
+  </main>
+
+</body>
+</html>

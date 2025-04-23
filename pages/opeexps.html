@@ -1,0 +1,73 @@
+<!DOCTYPE html> <!-- ESTRUTURA HTML FEITA POR TIAGO -->
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores e Expressões</title>
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <main>
+        <div class="intro">
+            <h1 class="title">Operadores e Expressões</h1>
+            <p class="description1">Em C, podem ser considerados operadores, símbolos que que nos permitem realizar operações matemáticas, relacionais, condicionais etc.</p>
+            <p class="description2">Operadores são símbolos que realizam operações em operandos.</p>
+        </div>
+
+        <div class="categories">
+            <h2 class="category-subtittle">Os operadores em C podem ser classificados em algumas categorias de acordo com sua funcionalidade:</h2>
+            <ul class="category-list">
+                <li class="category-item">Operadores aritméticos;</li>
+                <li class="category-item">Operadores relacionais;</li>
+                <li class="category-item">Operadores lógicos;</li>
+                <li class="category-item">Operadores bit a bit;</li>
+                <li class="category-item">Operadores de atribuição;</li>  
+            </ul>
+        </div>
+
+        <div class="operators">
+            <h2 class="operators-tittle">Em C existem 9 operadores aritméticos:</h2>
+            <ul class="operators-list">
+                <li class="operator-item">Adição +: Soma dois operandos;</li>
+                <li class="operator-item">Subtração -: Subtrai dois operandos;</li>
+                <li class="operator-item">Multiplicação *: Multiplica dois operandos;</li>
+                <li class="operator-item">Divisão /:  Divide dois operandos;</li>
+                <li class="operator-item">Modulo %: Retorno o resto de uma divisão;</li>
+                <li class="operator-item">Incrementação ++: Aumento o valor do operador por 1;</li>
+                <li class="operator-item">Decrementarão --: Diminui o valor do operador por 1;</li>
+            </ul>
+            <div class="ex-code">
+            <h2 class="code-subtittle">Abaixo está um exemplo demonstrado como esses operadores podem ser utilizados:</h2>
+            <pre class="code"><code>
+                #include &lt;stdio.h&gt;  
+                #include &lt;stdlib.h&gt; 
+                
+                int main() {  
+                    int a = 5; 
+                    int b = 2; 
+                
+                    printf("a + b = %i\n", a+b); // Soma os dois valores 
+                    printf("a - b = %i\n", a-b); // Subtrai b de a 
+                    printf("a * b = %i\n", a*b); // Multiplica a vezes b 
+                    printf("a / b = %i\n", a/b); // Divide a por b 
+                    printf("a %% b = %i\n", a%b); // Retorna o resto da divisão de a/b 
+                
+                    // Esses operadores abaixo estão alterando o valor da variável original 
+                    printf("a++ = %i\n", ++a); 
+                    printf("a-- = %i\n", --a); 
+                
+                    return 0; 
+                }
+            </code></pre>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+
+</html>
