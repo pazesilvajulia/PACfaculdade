@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html{
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   background-color: #fff;
@@ -29,29 +35,78 @@ body {
 /* BOTÃO E IMAGEM */
 .main-btn {
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 0.2rem;
+  position: relative;
+  width: 100vw;
+  
 }
 
 .main-btn button {
   padding: 1rem 2rem;
   font-size: 1.5rem;
-  border: none;
   background-color: #518581;
   color: white;
   font-weight: bold;
-  border-radius: 8px;
   cursor: pointer;
   max-width: 90%;
-  width: 400px;
-  margin-bottom: 2rem;
+  width: 800px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 10px solid white;
+}
+
+.main-btn button:hover{
+  background-color: #395856;
+  transition: 1s;
+
 }
 
 .main-img {
   max-width: 90%;
-  width: 100%;
+  width: 80%;
   height: auto;
   margin-top: 2rem;
-  border-radius: 10px;
+  
+}
+
+.sobre{
+  margin: 3vw 0 3vw 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 25vw;
+}
+
+.sobre h1{
+  text-align: center;
+  font-size: 3vw;
+  padding-bottom: 1vw;
+}
+
+.sobre h3{
+  padding-bottom: 1.3vw;
+  text-align: center;
+  font-size: 1.5vw;
+  color: #AFADB5;
+  font-weight: 300;
+}
+
+.sobre button, .btn-sobre{
+  background-color: #518581;
+  color: white;
+  width: 20vw;
+  border: none;
+  padding: 1vw;
+  font-size: 100%;
+  font-weight: bold;
+}
+
+.btn-sobre:hover{
+  transform: scale(1.1);
+  transition: 0.3s;
+
 }
 
 /* RESPONSIVO PARA TELAS PEQUENAS */

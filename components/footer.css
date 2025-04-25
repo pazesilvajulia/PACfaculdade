@@ -1,0 +1,13 @@
+footer{
+    display: flex;
+    height: 15vw;
+    background-color: #518581;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+a{
+    color: white;
+    font-weight: bold;
+}
