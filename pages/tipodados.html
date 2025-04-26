@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="/styles/style-tipodados.css">
     <link rel="stylesheet" href="/components/header.css" />
     <link rel="stylesheet" href="/components/footer.css" />
+    <link rel="stylesheet" href="/components/float-btn.css" />
     <!-- ABA NAVEGADOR -->
     <link rel="icon" type="image/png" href="images/logoC.png" />
     <title>Tipos de dados e variáveis</title>
@@ -19,27 +20,79 @@
 </head>
 
 <body>
+    <div id="float-btn"></div>
     <div id="header-container"></div> <!-- so chamei a div pq to trabalhando com component - ass; ju -->
 
     <main class="main-content">
+
+        <div class="floating-container">
+            <img src="/images/logoC.png" alt="Logo linguagem C" class="floating-image">
+        </div>
+
         <div class="intro">
-            <h1 class="title">Variáveis na Linguagem C</h1>
-            <p class="description">C é uma linguagem considerada de tipagem forte, ou seja, todas as variáveis precisam ter seus tipos
+            <h1>Variáveis na Linguagem C</h1>
+            <p>C é uma linguagem considerada de tipagem forte, ou seja, todas as variáveis precisam ter seus tipos
                 definidos.</p>
         </div>
 
         <div class="variable-types">
-            <h2 class="subtitle">O que é tipo de variáveis?</h2>
-            <p class="description">Variáveis são locais onde são guardados dados, exemplo idade, altura e nome de uma pessoa tudo isso
+            <h2>O que é uma variável <br>e quais são os tipos de variáveis?</h2>
+            <p>Variáveis são locais onde são guardados dados, exemplo idade, altura e nome de uma pessoa tudo isso
                 guardado num lugar chamado memória (RAM) do computador na, variáveis pode ser diversos tipos, os
                 principais são os chamados de variáveis primitivas:</p>
-            <ul class="list">
-                <li class="list-item">Float;</li>
-                <li class="list-item">Int;</li>
-                <li class="list-item">Char;</li>
-                <li class="list-item">Bool;</li>
-                <li class="list-item">String;</li>
-            </ul>
+
+                <!-- CARDS COM OS TIPOS DE VARIAVEIS-->
+
+                <div class="card-row">
+                    <div class="card">
+    
+                        <div class="card-body">
+                            <h1 class="typeexample">1</h1>
+                            <h2 class="card-title">Int (integer)</h2>  
+                            <p class="card-text">É um valor numérico inteiro. <br>Ex: int idade=18;</p>
+                        </div>
+                    </div>
+    
+                    <div class="card">
+        
+                        <div class="card-body">
+                            <h1 class="typeexample">1.5</h1>
+                            <h2 class="card-title">Float (decimal)</h2>  
+                            <p class="card-text">É um valor numérico que pode conter o ponto. Ex: float altura=1.8;</p>
+                        </div>
+                    </div>
+    
+                    <div class="card">
+        
+                        <div class="card-body">
+                            <h1 class="typeexample">"A"</h1>
+                            <h2 class="card-title">Char (caractere)</h2>  
+                            <p class="card-text">É um tipo de variável que pode representar tanto como valores numéricos quanto
+                                valores que representam uma letra baseado na tabela ASCII.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="card-row">
+                    <div class="card">
+    
+                        <div class="card-body">
+                            <h1 class="typeexample">T/F</h1>
+                            <h2 class="card-title">Bool (boolean)</h2>  
+                            <p class="card-text">O tipo de dado boolean representa um valor lógico, podendo ser verdadeiro (true) ou falso (false)</p>
+                        </div>
+                    </div>
+    
+                    <div class="card">
+        
+                        <div class="card-body">
+                            <h1 class="typeexample">TXT123</h1>
+                            <h2 class="card-title">String</h2>  
+                            <p class="card-text">As strings em C são vetores de caracteres terminados com um caractere nulo.</p>
+                        </div>
+                    </div>
+                </div>
         </div>
 
         <div class="examples">

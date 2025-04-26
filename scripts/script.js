@@ -11,9 +11,16 @@ fetch('/components/footer.html')
     document.getElementById('footer-container').innerHTML = data;
   });
 
+  fetch('/components/float-btn.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('float-btn').innerHTML = data;
+  });
+
 
 
 function toggleMenu() {
   const menu = document.getElementById('menu');
   menu.classList.toggle('show');
 }
+
