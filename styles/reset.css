@@ -10,3 +10,9 @@ body{
     font-size: 100%;
     list-style-type: none;
 }
+
+:root {
+    --bolder-color: #004482;
+    --standard-color: #649ad2;
+    --green-code: #48fa30;
+  }

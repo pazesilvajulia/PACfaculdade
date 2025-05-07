@@ -4,6 +4,10 @@ html{
   scroll-behavior: smooth;
 }
 
+p {
+  margin: 0% 10% 0% 10%;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   background-color: #fff;
@@ -44,7 +48,7 @@ body {
 .main-btn button {
   padding: 1rem 2rem;
   font-size: 1.5rem;
-  background-color: #518581;
+  background-color: var(--standard-color);
   color: white;
   font-weight: bold;
   cursor: pointer;
@@ -57,9 +61,8 @@ body {
 }
 
 .main-btn button:hover{
-  background-color: #395856;
+  background-color: var(--bolder-color);
   transition: 1s;
-
 }
 
 .main-img {
@@ -67,7 +70,6 @@ body {
   width: 80%;
   height: auto;
   margin-top: 2rem;
-  
 }
 
 .sobre{
@@ -94,7 +96,7 @@ body {
 }
 
 .sobre button, .btn-sobre{
-  background-color: #518581;
+  background-color: var(--bolder-color);
   color: white;
   width: 20vw;
   border: none;
