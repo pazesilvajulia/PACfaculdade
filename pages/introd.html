@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" type="text/css" href="/styles/reset.css">
+    <link rel="stylesheet" type="text/css" href="/styles/code.css">
+    <link rel="stylesheet" type="text/css" href="/styles/style-introd.css">
+    <link rel="stylesheet" href="/components/header.css" />
+    <link rel="stylesheet" href="/components/footer.css" />
+    <link rel="stylesheet" href="/components/float-btn.css" />
+    <!-- ABA NAVEGADOR -->
+    <link rel="icon" type="image/png" href="images/logoC.png" />
+    <title>Lógica de programação</title>
+
+</head>
+<body>
+
+    <div id="float-btn"></div> <!-- component -->
+    <div id="header-container"></div> <!-- component -->
+    
+    <main>
+        
+        <h1>Introdução à Programação em C</h1>
+        
+        <section class="content">       
+            <h2>História e importância da linguagem C </h2>
+            <p>A linguagem C foi criada por Dennis Ritchie no Bell Laboratories em 1972, inicialmente para reescrever o Unix, tornando-se essencial no desenvolvimento de sistemas operacionais. Em 1978, o livro The C Programming Language, de Kernighan & Ritchie, ajudou a popularizar a linguagem. Nos anos 80, a falta de padronização levou à criação do padrão ANSI C em 1989, seguido pelo C99 em 1999. C se destaca por sua velocidade, portabilidade e influência, sendo a base do C++ e de linguagens como Java e C#, mantendo-se fundamental até hoje. </p>
+            <p>A linguagem C é fundamental por proporcionar controle de baixo nível sobre o hardware, permitindo manipulação direta da memória, o que é essencial para otimizar o desempenho de programas e trabalhar com sistemas embarcados, como os usados em carros e eletrodomésticos. Além disso, C é a base de muitas linguagens modernas, como C++, Java e Python, facilitando o aprendizado de outras linguagens. Programas escritos em C são conhecidos por sua eficiência e velocidade, sendo usados em sistemas operacionais como Windows e Linux, além de servidores da internet. Por fim, C é a linguagem ideal para quem deseja desenvolver sistemas operacionais ou compiladores, devido ao seu controle preciso do hardware e alta eficiência. </p>
+        </section>
+
+        <section class="content">
+            <h2>Estrutura básica de um programa em C (inclusão de bibliotecas, função main, uso do return 0). </h2>
+            <p>A função #include <stdio.h> adiciona a biblioteca, que permite usar funções como printf para exibir mensagens ou scanf para escasniar. A inclusão de bibliotecas é necessária para acessar funcionalidades específicas em C. A função main é onde a execução começa. Em C, todo programa precisa ter uma função main, que pode ser definida com ou sem parâmetros. O comando return 0; dentro da função main indica que o programa foi executado com sucesso. O valor 0 é usado para indicar que o programa terminou sem nenhum erro. </p>
+            <p>Como compilar e executar um programa em C (podem citar compiladores como GCC, Dev C++, CodeBlocks) </p>
+            
+            <div class="code">
+                <h4>Código</h4>
+                <ol>
+                  <li><hl>#include</hl> &lt;stdio.h&gt;</li><br>
+                  <li>int main() {</li>
+                  <ul>
+                    <li><hl>printf</hl>("Olá mundo!");</li>
+                    <li>return 0;</li>
+                  </ul>
+                  <li>}</li>
+                </ol>
+                <h4>Saída</h4>
+                <ol>
+                    <li>Olá mundo!</li>
+                </ol>
+              </div>
+        </section>
+
+        <section class="content">
+            <h2>Sintaxe básica (comentários, identação, boas práticas)</h2>
+            <p>A sintaxe básica de um programa em C envolve aspectos essenciais como comentários, indentação e boas práticas. Para fazer comentários em c utilize // comentário e escreva numa linha, ou então utilize /* comentário */ para mais de uma linha. a Identação é importante pois deixa o código mais organizado e fácil de entender. Além disso temos algumas boas práticas para um programa em C que podem ser não criara linhas de código muito longas e a indentação também se encaixa aqui.</p>
+            <div class="code">
+                <h4>Código</h4>
+                <ol>
+                    <li><comment>/* Este é um comentário. Ele não afeta o código nem é interpretado pela máquina na execução. */</comment></li>
+                    <li>#include &lt;stdio.h&gt;  <comment>// Também posso comentar usando duas barras</comment></li><br>
+                    <li>int <hl>main()</hl> {</li>
+                    <ul>
+                    <li><hl>printf</hl>("Olá mundo!");</li>
+                    <li>return 0;</li>
+                  </ul>
+                  <li>}</li>
+                </ol>
+                <h4>Saída</h4>
+                <ol>
+                    <li>Olá mundo!</li>
+                </ol>
+            </div>
+        </section>
+    </main>
+
+
+    <div id="footer-container"></div> <!--component-->
+
+    <!-- SCRIPTS -->
+    <script src="/scripts/script.js"></script>
+
+</body>
+</html>

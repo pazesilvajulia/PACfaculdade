@@ -1,140 +1,164 @@
-<!DOCTYPE html> <!-- ESTRUTURA HTML FEITA POR KAUAN -->
+<!DOCTYPE html> 
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Estruturas de Repetição em C</title>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" type="text/css" href="/styles/reset.css">
+    <link rel="stylesheet" type="text/css" href="/styles/code.css">
+    <link rel="stylesheet" type="text/css" href="/styles/style-repeticao.css">
+    <link rel="stylesheet" href="/components/header.css" />
+    <link rel="stylesheet" href="/components/footer.css" />
+    <link rel="stylesheet" href="/components/float-btn.css" />
+    <!-- ABA NAVEGADOR -->
+    <link rel="icon" type="image/png" href="images/logoC.png" />
+    <title>Estruturas condicionais</title>
 </head>
 <body>
 
-  <header class="site-header">
-    <h1 class="site-title">Estruturas de Repetição na Linguagem C</h1>
-    <p class="site-subtitle">Aprenda como usar os laços de repetição while, do while e for</p>
-  </header>
+  <div id="float-btn"></div> <!-- component -->
+  <div id="header-container"></div> <!-- component -->  
 
-  <main class="main-content">
+  <main>
 
-    <section class="section-overview">
+    <h1>Estruturas de Repetição na Linguagem C</h1>
+    <p >Aprenda como usar os laços de repetição <code class="code-inline">while</code>, <code class="code-inline">do while</code> e <code class="code-inline">for</code>
 
-      <h2 class="section-title">O que são laços de repetição?</h2>
+    <h2>O que são laços de repetição?</h2>
+    <p>
+      Laços de repetição em C são usados para executar um mesmo trecho de código várias vezes, sem a necessidade de reescrever as instruções. Existem três estruturas principais de repetição na linguagem C:
+      <code class="code-inline">while</code>, <code class="code-inline">do while</code> e <code class="code-inline">for</code>
+    </p>
+    
+    <h2>Estrutura <blue>While</blue></h2>
 
-      <p class="section-paragraph">
-        Laços de repetição em C são usados para executar um mesmo trecho de código várias vezes, sem a necessidade de reescrever as instruções. Existem três estruturas principais de repetição na linguagem C:
-        <strong>while</strong>, <strong>do while</strong> e <strong>for</strong>.
-      </p>
+    <p>
+      A estrutura <code class="code-inline">while</code> executa um bloco de código enquanto a condição especificada for verdadeira. A verificação acontece antes da execução.
+    </p>
 
-    </section>
+    <h3>Etapas do loop <code class="code-inline">while</code>:</h3>
 
-    <section class="section-while">
+    <div class="card">
+      <div class="card-body">
+        <ol>
+          <li>Testa a condição.</li>
+          <li>Se for falsa, pula o bloco.</li>
+          <li>Se for verdadeira, executa o bloco.</li>
+          <li>Volta ao passo 1 após a execução.</li>
+        </ol>
+      </div>
+   </div>
 
-      <h2 class="section-title">Estrutura <code>while</code></h2>
+    <h3>Exemplo:</h3>
 
-      <p class="section-paragraph">
-        A estrutura <strong>while</strong> executa um bloco de código enquanto a condição especificada for verdadeira. A verificação acontece antes da execução.
-      </p>
+    <code class="code">
+      <ul>
+        <li><h4>Código</h4></li>
+        <li><hl>int</hl> contador = <hl>1</hl>;</li>
+        <li></li>
+        <li><hl>while</hl>(contador <hl>&lt;=</hl> <hl>10</hl>) {</li>
+        <ul>
+          <li>printf("<hl>%i</hl> / ", contador);</li>
+          <li>contador = contador <hl>+</hl> <hl>1</hl>;</li>
+        </ul>
+        <li>}</li>
+        <li></li>
+        <li>printf("<hl>\n</hl>Finalizou o comando do while!");</li>
+      </ul>      
+    </code>
 
-      <h3 class="section-subtitle">Etapas do loop <code>while</code>:</h3>
-
-      <ol class="section-list">
-        <li>Testa a condição.</li>
-        <li>Se for falsa, pula o bloco.</li>
-        <li>Se for verdadeira, executa o bloco.</li>
-        <li>Volta ao passo 1 após a execução.</li>
+    
+    <code class="code">
+      <ol>
+        <li>
+          <h4>Saída:</h4>
+        </li>
+        <li>1 / 2 / 3 / 4 / 5 / 6 / 7 / 8 / 9 / 10 /</li>
+        <li>Finalizou o comando do while!</li>
       </ol>
+    </code>
 
-      <h3 class="section-subtitle">Exemplo:</h3>
+    <h2>Estrutura <blue>do while</blue></h2>
 
-      <pre class="code-block">
-        int contador = 1;
+    <p>
+      Diferente do <code class="code-inline">while</code>, o <code class="code-inline">do while</code> executa o bloco primeiro e só depois testa a condição. Ou seja, o bloco será executado pelo menos uma vez.
+    </p>
 
-        while(contador &lt;= 10) {
-        printf("%i / ", contador);
-        contador = contador + 1;
-        }
+    <h3>Exemplo:</h3>
 
-        printf("\nFinalizou o comando do while!");
-      </pre>
+    <code class="code">
+      <ol>
+        <li><hl>int</hl> numero;</li>
+        <li><hl>do</hl> {</li>
+        <ul>
+          <li>scanf("<hl>%i</hl>", &numero);</li>
+        </ul>
+        <li>} <hl>while</hl>(numero <hl>&lt;=</hl> <hl>0</hl>);</li>
+      </ol>      
+    </code>
 
-      <p class="section-paragraph"><strong>Saída:</strong></p>
+    <p>
+      Esse código força a leitura de um número positivo. Mesmo que o usuário digite um valor inválido primeiro, o código executa ao menos uma vez.
+    </p>
 
-      <pre class="code-block">
-        1 / 2 / 3 / 4 / 5 / 6 / 7 / 8 / 9 / 10 /
-        Finalizou o comando do while!
-      </pre>
+    <h2>Estrutura <blue>for</blue></h2>
 
-    </section>
+    <p>
+      A estrutura <code class="code-inline">for</code> permite definir três partes essenciais no próprio cabeçalho:
+    </p>
 
-    <section class="section-do-while">
+    <div class="card">
+      <div class="card-body">
+        <ul>
+          <li>Inicialização da variável controladora;</li>
+          <li>Condição de continuação do loop;</li>
+          <li>Atualização da variável a cada repetição.</li>
+        </ul>
+      </div>
+    </div>
 
-      <h2 class="section-title">Estrutura <code>do while</code></h2>
+    <h3>Exemplo:</h3>
 
-      <p class="section-paragraph">
-        Diferente do <strong>while</strong>, o <strong>do while</strong> executa o bloco primeiro e só depois testa a condição. Ou seja, o bloco será executado pelo menos uma vez.
-      </p>
-
-      <h3 class="section-subtitle">Exemplo:</h3>
-
-      <pre class="code-block">
-        int numero;
-
-        do {
-        scanf("%i", &numero);
-        } while(numero &lt;= 0);
-      </pre>
-
-      <p class="section-paragraph">
-        Esse código força a leitura de um número positivo. Mesmo que o usuário digite um valor inválido primeiro, o código executa ao menos uma vez.
-      </p>
-
-    </section>
-
-    <section class="section-for">
-
-      <h2 class="section-title">Estrutura <code>for</code></h2>
-
-      <p class="section-paragraph">
-        A estrutura <strong>for</strong> permite definir três partes essenciais no próprio cabeçalho:
-      </p>
-
-      <ul class="section-list">
-        <li>Inicialização da variável controladora;</li>
-        <li>Condição de continuação do loop;</li>
-        <li>Atualização da variável a cada repetição.</li>
+    <code class="code">
+      <ul>
+        <li><hl>for</hl>(<hl>int</hl> i = <hl>1</hl>; i <hl>&lt;=</hl> <hl>10</hl>; i<hl>++</hl>) {</li>
+        <ul>
+          <li>printf("<hl>%d</hl> / ", i);</li>
+        </ul>
+        <li>}</li>
       </ul>
+    </code>
 
-      <h3 class="section-subtitle">Exemplo:</h3>
+    <h2>Comparação entre <code class="code-inline">while</code> e <code class="code-inline">for</code></h2>
 
-      <pre class="code-block">
-        for(int i = 1; i &lt;= 10; i++) {
-        printf("%d / ", i);
-        }
-      </pre>
+    <p>Os dois laços podem fazer a mesma coisa. Veja o exemplo abaixo:</p>
 
-    </section>
+    <code class="code">
+      <ul>
+        <li><comment>// Usando while</comment></li>
+        <li><hl>int</hl> i = <hl>1</hl>;</li>
+        <li><hl>while</hl>(i <hl>&lt;=</hl> <hl>10</hl>) {</li>
+        <ul>
+          <li>printf("<hl>%d</hl> / ", i);</li>
+          <li>i<hl>++</hl>;</li>
+        </ul>
+        <li>}</li>
+        <li></li>
+        <li><comment>// Usando for</comment></li>
+        <li><hl>for</hl>(<hl>int</hl> i = <hl>1</hl>; i <hl>&lt;=</hl> <hl>10</hl>; i<hl>++</hl>) {</li>
+        <ul>
+          <li>printf("<hl>%d</hl> / ", i);</li>
+        </ul>
+        <li>}</li>
+      </ul>      
+    </code>
 
-    <section class="section-comparison">
+</main>
 
-      <h2 class="section-title">Comparação entre <code>while</code> e <code>for</code></h2>
+    <div id="footer-container"></div> <!--component-->
 
-      <p class="section-paragraph">Os dois laços podem fazer a mesma coisa. Veja o exemplo abaixo:</p>
-
-      <pre class="code-block">
-        // Usando while
-        int i = 1;
-        while(i &lt;= 10) {
-        printf("%d / ", i);
-        i++;
-        }
-
-        // Usando for
-        for(int i = 1; i &lt;= 10; i++) {
-        printf("%d / ", i);
-        }
-      </pre>
-
-    </section>
-
-  </main>
+    <!-- SCRIPTS -->
+    <script src="/scripts/script.js"></script>
 
 </body>
 </html>

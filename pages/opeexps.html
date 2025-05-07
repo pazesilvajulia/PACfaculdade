@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- STYLESHEETS -->
     <link rel="stylesheet" type="text/css" href="/styles/reset.css">
+    <link rel="stylesheet" type="text/css" href="/styles/code.css">
     <link rel="stylesheet" type="text/css" href="/styles/style-opeexps.css">
     <link rel="stylesheet" href="/components/header.css" />
     <link rel="stylesheet" href="/components/footer.css" />
@@ -13,71 +14,132 @@
     <!-- ABA NAVEGADOR -->
     <link rel="icon" type="image/png" href="images/logoC.png" />
     <title>Tipos de dados e variáveis</title>
-    <!-- SCRIPTS -->
-    <script src="/scripts/script.js"></script>
-
-
 </head>
 
 <body>
-    <div id="float-btn"></div>
-    <div id="header-container"></div> <!-- chamei a div pq to trabalhando com component - ass; ju -->
+    <div id="float-btn"></div> <!-- component -->
+    <div id="header-container"></div> <!-- component -->
 
     <main>
-        <div class="intro">
-            <h1 class="title">Operadores e Expressões</h1>
-            <p class="description1">Em C, podem ser considerados operadores, símbolos que que nos permitem realizar operações matemáticas, relacionais, condicionais etc.</p>
-            <p class="description2">Operadores são símbolos que realizam operações em operandos.</p>
-        </div>
+        
+        <h1>Operadores e Expressões</h1>
+        <p>Em C, podem ser considerados operadores, símbolos que que nos permitem realizar operações matemáticas, relacionais, condicionais etc.</p>
+        <p>Operadores são símbolos que realizam operações em operandos.</p>
+        
+        <h2>Os operadores em C podem ser classificados em algumas categorias de acordo com sua funcionalidade:</h2>
+        
+        <div class="card-row">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title">Operadores Aritméticos</h2>  
+                    <p class="typeexample">+ - / * %</p>
+                </div>
+            </div>
 
-        <div class="categories">
-            <h2 class="category-subtittle">Os operadores em C podem ser classificados em algumas categorias de acordo com sua funcionalidade:</h2>
-            <ul class="category-list">
-                <li class="category-item">Operadores aritméticos;</li>
-                <li class="category-item">Operadores relacionais;</li>
-                <li class="category-item">Operadores lógicos;</li>
-                <li class="category-item">Operadores bit a bit;</li>
-                <li class="category-item">Operadores de atribuição;</li>  
-            </ul>
-        </div>
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title">Operadores Relacionais</h2>
+                    <p class="typeexample">== < > !=</p>
+                </div>
+            </div>
 
-        <div class="operators">
-            <h2 class="operators-tittle">Em C existem 9 operadores aritméticos:</h2>
-            <ul class="operators-list">
-                <li class="operator-item">Adição +: Soma dois operandos;</li>
-                <li class="operator-item">Subtração -: Subtrai dois operandos;</li>
-                <li class="operator-item">Multiplicação *: Multiplica dois operandos;</li>
-                <li class="operator-item">Divisão /:  Divide dois operandos;</li>
-                <li class="operator-item">Modulo %: Retorno o resto de uma divisão;</li>
-                <li class="operator-item">Incrementação ++: Aumento o valor do operador por 1;</li>
-                <li class="operator-item">Decrementarão --: Diminui o valor do operador por 1;</li>
-            </ul>
-            <div class="ex-code">
-            <h2 class="code-subtittle">Exemplo prático do uso dos operadores:</h2>
-            <pre class="code"><code>
-                #include &lt;stdio.h&gt;  
-                #include &lt;stdlib.h&gt; 
-                
-                int main() {  
-                    int a = 5; 
-                    int b = 2; 
-                
-                    printf("a + b = %i\n", a+b); // Soma os dois valores 
-                    printf("a - b = %i\n", a-b); // Subtrai b de a 
-                    printf("a * b = %i\n", a*b); // Multiplica a vezes b 
-                    printf("a / b = %i\n", a/b); // Divide a por b 
-                    printf("a %% b = %i\n", a%b); // Retorna o resto da divisão de a/b 
-                
-                    // Esses operadores abaixo estão alterando o valor da variável original 
-                    printf("a++ = %i\n", ++a); 
-                    printf("a-- = %i\n", --a); 
-                
-                    return 0; 
-                }
-            </code></pre>
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title">Operadores Lógicos</h2>
+                    <p class="typeexample">&& || !</p>  
+                </div>
+            </div>
         </div>
+        <div class="card-row">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title">Operadores bit a bit<br>Bitwise</h2>  
+                    <p class="typeexample">` & ^ ~</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title">Operadores de Atribuição</h2> 
+                    <p class="typeexample">= += -=</p> 
+                </div>
+            </div>
+        </div>        
+        
+        <h2>Em C existem 9 operadores aritméticos</h2>
+        <h2>Exemplo prático do uso dos operadores:</h2>
+        <div class="code-container">
+            <div class="code input">
+                <ul>
+                    <li><h4>Código</h4></li>
+                    <li>#include &lt;stdio.h&gt;</li>
+                    <li><comment>// entrada e saída de dados (ex: printf)</comment></li>
+                    <li>#include &lt;stdlib.h&gt;</li>
+                    <li>int <hl>main()</hl> {</li>
+                    <ul>
+                        <li>int soma, subtracao, multiplicacao, divisao, modulo;</li>
+                        <li></li>
+                        <li><hl>int</hl> a = <hl>5</hl>;</li>
+                        <li>int b = 2;</li>
+                        <li><comment>// Declarando a var "a" com o valor inteiro 5 e a "b" com valor inteiro 2</comment></li>
+                        <li><hl>soma</hl> = a <hl>+</hl> b;  <comment>// var "soma" recebe a + b</comment></li>
+                        <li>printf("<hl>%i</hl>", soma);</li>
+                        <li><hl>subtracao</hl> = a <hl>-</hl> b;</li>
+                        <li>printf("%i", subtracao);</li>
+                        <li><hl>multiplicacao</hl> = a <hl>*</hl> b;</li>
+                        <li>printf("%i", multiplicacao);</li>
+                        <li><hl>divisao</hl> = a <hl>/</hl> b;</li>
+                        <li>printf("%<hl>i</hl>", divisao); <comment>  //  divisão por inteiros, resultado inteiro</comment></li>
+                        <li><hl>modulo</hl> = a <hl>%</hl> b;</li>
+                        <li>printf("%i", modulo);</li>
+                        <li></li>
+                        <li>a<hl>++</hl>;</li>
+                        <li>printf("%i", a);</li>
+                        <li>b++;</li>
+                        <li>printf("%i", b);</li>
+                        <li>a<hl>--</hl>;</li>
+                        <li>printf("%i", a);</li>
+                
+                        <li><hl>return</hl> 0;   <comment>// Finaliza o programa com sucesso</comment></li>
+                    </ul>
+                    <li>}</li>
+                </ul>
+            </div>
+            <div class="code output">
+                <ul>
+                    <li><h4>Saída</h4></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li>7</li>
+                    <li></li>
+                    <li>3</li>
+                    <li></li>
+                    <li>10</li>
+                    <li></li>
+                    <li>2</li>
+                    <li></li>
+                    <li>1</li>
+                    <li></li>
+                    <li></li>
+                    <li>3</li>
+                    <li></li>
+                    <li>6</li>
+                    <li></li>
+                    <li>2</li>
+                </ul>
+            </div>                       
+        </code>
     </main>
     <div id="footer-container"></div>
+    <!-- SCRIPTS -->
+    <script src="/scripts/script.js"></script>
 </body>
 
 </html>

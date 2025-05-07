@@ -1,45 +1,87 @@
 <!DOCTYPE html> <!-- ESTRUTURA HTML FEITA POR CHARLES-->
 
-<html>
+<html lang="pt-br">
     <head>
-        <title>Entrada e Saida de Dados</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- STYLESHEETS -->
+        <link rel="stylesheet" type="text/css" href="/styles/reset.css">
+        <link rel="stylesheet" type="text/css" href="/styles/code.css">
+        <link rel="stylesheet" type="text/css" href="/styles/style-inoutdados.css">
+        <link rel="stylesheet" href="/components/header.css" />
+        <link rel="stylesheet" href="/components/footer.css" />
+        <link rel="stylesheet" href="/components/float-btn.css" />
+        <!-- ABA NAVEGADOR -->
+        <link rel="icon" type="image/png" href="images/logoC.png" />
+        <title>Entrada e Saída de Dados</title>
     </head>
 
-    <body>
+<body>
+
+    <div id="float-btn"></div> <!-- component -->
+    <div id="header-container"></div> <!-- component -->
+
+    <main>
         <h1>Entrada e Saída de Dados</h1>
+        
+        <p>A linguagem C possui diversas funções para controlar a entrada e saída de dados. Neste momento, iremos abordar apenas as funções <code class="code-inline">scanf()</code> e <code class="code-inline">printf()</code>. Essas funções nos permitem interagir com os dispositivos de entrada e saída, respectivamente, padrão do sistema.</p>
+        
+        <p>A função <code class="code-inline">scanf()</code> serve para ler um valor digitado pelo usuário. Ela possui a seguinte estrutura de utilização:</p>
+        
+        <code class="code">
+            <ul>
+            <li><hl>scanf</hl>("<hl>%indicador_tipo_var</hl>", &nome_var);</li>
+            </ul>
+        </code>
+        
+        <p>O indicador de tipo serve para especificar o tipo de variável a ser lido<br> (caractere, número inteiro, número decimal, string, etc.)</p>
+        <p>O segundo parâmetro é o nome da variável que declaramos, <br>que é onde vamos armazenar a informação que vamos ler.</p>
+        
+        <p>A função <code class="code-inline">printf()</code> serve para escrever uma mensagem ou um valor de uma variável para o console.<br>Sua estrutura de utilização é a seguinte:</p>
+        
+        <code class="code">
+            <ul>
+            <li><hl>printf</hl>("Mensagem<hl>\n</hl>");</li>
+            </ul>
+        </code>
+        
+        <p>Essa forma de utilização serve para simplesmente escrever a mensagem descrita dentro da função para o console. A utilização do caractere <code class="code-inline">\n</code> é para garantir que o programa, ao finalizar, deixe uma linha de espaço entre seu último resultado e a linha de comando do console.</p>
+        
+        <p>Além dessa forma, temos também a seguinte:</p>
+        
+        <code class="code">
+            <ul>
+            <li><hl>int</hl> valor = <hl>41</hl>;</li>
+            <li><hl>printf</hl>("<hl>%i</hl>", valor);</li>
+            </ul>
+        </code>
+        
+        <p>Similar ao <code class="code-inline">scanf()</code>, a função <code class="code-inline">printf()</code> também utiliza um indicador de tipo dentro das aspas. Ele serve para indicar qual o tipo do dado que queremos fazer o print para o console.</p>
+        
+        <p>O segundo parâmetro é o nome da variável que criamos. É de lá que a função irá buscar a informação para escrever no console.</p>
+          
 
-        <div class="explicacao">
-            <h2>Conteúdo</h2>
-                <p>A linguagem C possui diversas funções para controlar a entrada e saída de dados. Neste momento, iremos abordar apenas as funções scanf() e printf(). Essas funções nos permitem interagir com os dispositivos de entrada e saída, respectivamente, padrão do sistema.</p>
-                <p>A função scanf() serve para ler um valor digitado pelo usuário. Ela possui a seguinte estrutura de utilização:</p>
-                <p>scanf("%indicador_tipo_var", &nome_var)</p>
-                <p>O indicador de tipo serve para especificar o tipo de variável a ser lido (caractere, número inteiro, número decimal, string, etc.)</p>
-                <p>O segundo parâmetro e o nome da variável que declaramos, que é onde vamos armazenar a informação que vamos ler.</p>
-                <p>A função printf() serve para escrever uma mensagem ou um valor de uma variável para o console. Sua estrutura de utilização é a seguinte:</p>
-                <p>printf("Mensagem\n");</p>
-                <p>Essa forma de utilização serve para simplesmente escrever a mensagem descrita dentro da função para o console. A utilização do caractere \n é para garantir que o programa, ao finalizar, deixe uma linha de espaço entre seu último resultado e a linha de comando do console.</p>
-                <p>Além dessa forma, temos também a seguinte:</p>
-                <p>int valor = 41;</p>
-                <p>printf("%i", valor);</p>
-                <p>Similar ao scanf(), a função printf() também utiliza um indicador de tipo dentro das aspas. Ele serve para indicar qual o tipo do dado que queremos fazer o print para o console.</p>
-                <p>O segundo parâmetro é o nome da variável que criamos. É de lá que a função irá buscar a informação para escrever no console.</p>
-            </div>
 
-        <div class="exercicios">
-            <h2>Exercícios</h2>
-                <p><strong>1 – Escreva um programa que escreva seu nome.</strong></p>
-                <textarea name="resposta1" rows="10" cols="50" placeholder="Digite sua resposta aqui..."></textarea>
+        <h2>Exercícios</h2>
+        
+        <p><strong>1 – Escreva um programa que escreva seu nome.</strong></p>
+        <textarea name="resposta1" rows="10" cols="50" placeholder="Digite sua resposta aqui..."></textarea>
 
-                <p><strong>2 – Escreva um programa que escreva o resultado da soma de 5 e 12.</strong></p>
-                <textarea name="resposta1" rows="10" cols="50" placeholder="Digite sua resposta aqui..."></textarea>
+        <p><strong>2 – Escreva um programa que escreva o resultado da soma de 5 e 12.</strong></p>
+        <textarea name="resposta2" rows="10" cols="50" placeholder="Digite sua resposta aqui..."></textarea>
 
-                <p><strong>3 – Escreva um programa que leia um número e o escreva para o console.</strong></p>
-                <textarea name="resposta1" rows="15" cols="50" placeholder="Digite sua resposta aqui..."></textarea>
+        <p><strong>3 – Escreva um programa que leia um número e o escreva para o console.</strong></p>
+        <textarea name="resposta3" rows="15" cols="50" placeholder="Digite sua resposta aqui..."></textarea>
 
-                <p><strong>4 – Escreva um programa que peça o nome e o CPF de um estudante, armazene suas informações e retorne “cadastro bem-sucedido” e escreva as informações lidas, na tela.</strong></p>
-                <textarea name="resposta1" rows="15" cols="50" placeholder="Digite sua resposta aqui..."></textarea>    
+        <p><strong>4 – Escreva um programa que peça o nome e o CPF de um estudante, armazene suas informações e retorne “cadastro bem-sucedido” e escreva as informações lidas, na tela.</strong></p>
+        <textarea name="resposta4" rows="15" cols="50" placeholder="Digite sua resposta aqui..."></textarea>
+    </main>
 
-                <p><button onclick="alert('Respostas enviadas!')">Enviar Respostas</button></p>
-        </div>
-    </body>
+    <div id="footer-container"></div> <!--component-->
+
+    <!-- SCRIPTS -->
+    <script src="/scripts/script.js"></script>
+
+</body>
+    
 </html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" type="text/css" href="/styles/reset.css">
+    <link rel="stylesheet" type="text/css" href="/styles/code.css">
+    <link rel="stylesheet" type="text/css" href="/styles/style-logica.css">
+    <link rel="stylesheet" href="/components/header.css" />
+    <link rel="stylesheet" href="/components/footer.css" />
+    <link rel="stylesheet" href="/components/float-btn.css" />
+    <!-- ABA NAVEGADOR -->
+    <link rel="icon" type="image/png" href="images/logoC.png" />
+    <title>Lógica de programação</title>
+</head>
+
+<body>
+
+  <div id="float-btn"></div> <!-- component -->
+  <div id="header-container"></div> <!-- component -->
+
+    <main>
+        <h1>Lógica de Programação</h1>
+
+        <section class="definicao-importancia content">
+            <h2>Definição e importância</h2>
+            <p>A lógica de programação é uma forma de desenvolver sequências lógicas, para assim obter resultados específicos. Ou seja, esse conjunto de técnicas e métodos permite a elaboração de algoritmos que resolvem problemas de forma clara e eficiente. A lógica de programação é a base fundamental para o desenvolvimento de software e a resolução de problemas computacionais. </p>
+        </section>
+
+        <section class="resolucao-problemas content">
+            <h2>Como a Lógica é usada para resolver problemas</h2>
+            <p>A lógica de programação resolve problemas dividindo-os em etapas organizadas, criando algoritmos com instruções claras. Usa estruturas como condicionais (if-else), laços (for, while) e estruturas de dados para tomar decisões, repetir tarefas e organizar informações.</p>
+        </section>
+
+        <section class="exemplos-simples content">   
+            <h2>Exemplos Simples</h2>
+
+            <div class="code">
+                <h4>REGAR PLANTA {</h4>
+                <ol>
+                  <li><hl>verificar</hl> a planta</li>
+                  <li><comment>se</comment> a planta estiver seca: {</li>
+                  <ul>
+                    <li><hl>regar</hl> a planta;</li>
+                  </ul>
+                  <li>}</li>
+                  <li><hl>repetir</hl> o processo por 5 dias;</li>
+                  <li><hl>avaliar</hl> a saúde da planta;</li>
+                  <li><comment>se</comment> a planta precisar de mais cuidados: {</li>
+                  <ul>
+                    <li><hl>continuar</hl> cuidando;</li>
+                  </ul>
+                  <li>}</li>
+                  <li>Fim;</li>
+                </ol>
+                <h4>}</h4>
+              </div>
+
+            <div class="code">
+                <h4>PREPARAR CAFÉ {</h4>
+                <ol>
+                  <li><comment>se</comment> tem pó de café <hl>E</hl> água {</li>
+                  <ul>
+                    <li><hl>ferver</hl> a água;</li>
+                    <li><hl>colocar</hl> o café no filtro;</li>
+                    <li><hl>despejar</hl> água quente;</li>
+                    <li>aguardar coar;</li>
+                    <li><hl>servir</hl> o café;</li>
+                  </ul>
+                  <li>} <comment>se não</comment> tem pó de café e/ou água {</li>
+                  <ul>
+                    <li><hl>comprar</hl> ingredientes;</li>
+                  </ul>
+                  <li>}</li>
+                  <li>Fim;</li>
+                </ol>
+                <h4>}</h4>
+              </div>
+        </section>
+      </main>
+
+    <div id="footer-container"></div> <!--component-->
+
+    <!-- SCRIPTS -->
+    <script src="/scripts/script.js"></script>
+
+</body>
+</html>
