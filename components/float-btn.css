@@ -1,3 +1,8 @@
+:root {
+    --bolder-color: #004482;
+    --standard-color: #649ad2;
+    --green-code: #48fa30;
+  }
 
 .float{
 	position:fixed;
@@ -5,7 +10,7 @@
 	height:60px;
 	bottom:40px;
 	right:40px;
-	background-color:#518581;
+	background-color: var(--bolder-color);
 	border-radius:50px;
 	text-align:center;
 	box-shadow: 2px 2px 3px #999;
