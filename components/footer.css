@@ -1,14 +1,9 @@
-:root {
-    --bolder-color: #004482;
-    --standard-color: #649ad2;
-    --green-code: #48fa30;
-  }
 
 footer{
     margin-top: 3vw;
     display: flex;
     height: 15vw;
-    background-color: var(--standard-color);
+    background-color: var(--bolder-color);
     align-items: center;
     justify-content: center;
     flex-direction: column;

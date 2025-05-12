@@ -48,7 +48,7 @@ body {
 .main-btn button {
   padding: 1rem 2rem;
   font-size: 1.5rem;
-  background-color: var(--standard-color);
+  background-color: var(--bolder-color);
   color: white;
   font-weight: bold;
   cursor: pointer;
@@ -61,7 +61,7 @@ body {
 }
 
 .main-btn button:hover{
-  background-color: var(--bolder-color);
+  background-color: var(--standard-color);
   transition: 1s;
 }
 
@@ -117,12 +117,16 @@ body {
       font-size: 6vw;
   }
 
+
   .main-btn button {
       font-size: 1.2rem;
       width: 90%;
   }
 
+
   .arrow {
       width: 8vw;
   }
 }
+
+

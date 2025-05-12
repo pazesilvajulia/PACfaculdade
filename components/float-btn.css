@@ -1,8 +1,3 @@
-:root {
-    --bolder-color: #004482;
-    --standard-color: #649ad2;
-    --green-code: #48fa30;
-  }
 
 .float{
 	position:fixed;
@@ -20,5 +15,5 @@
 }
 
 .img{
-    height: 3vw;
+    height: 2.5vw;
 }
