@@ -2,6 +2,7 @@
 
 html{
   scroll-behavior: smooth;
+
 }
 
 p {
@@ -41,7 +42,7 @@ body {
   text-align: center;
   margin-top: 0.2rem;
   position: relative;
-  width: 100vw;
+  width: 98.5vw;
   
 }
 
